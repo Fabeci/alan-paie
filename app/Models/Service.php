@@ -13,4 +13,11 @@ class Service extends Model
     {
         return $this->hasMany(Poste::class);
     }
+
+    public function employe()
+    {
+        return $this->hasOne(Employe::class);
+    }
+
+
 }

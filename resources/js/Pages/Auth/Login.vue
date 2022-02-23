@@ -7,7 +7,7 @@
             <img :src="this.baseUrl+'vendors/images/logo.png'" alt />
           </a>
         </div>
-        <div ><strong class="text-5xl text-red-600">Alàn</strong></div>
+        <div ><strong class="text-5xl text-red-600">alàn</strong></div>
         <div class="login-menu">
           <ul>
             <li>

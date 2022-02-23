@@ -7,7 +7,7 @@
             <img :src="this.baseUrl+'vendors/images/logo.png'" alt />
           </a>
         </div>
-        <div><strong class="text-5xl text-red-600">Alàn</strong></div>
+        <div><strong class="text-5xl text-red-600">alàn</strong></div>
         <div class="login-menu">
           <ul> 
             <li>
@@ -499,7 +499,7 @@
     <div class="login-header box-shadow bg-gray-700 text-white mt-10 p-2">
       <div class="align-items-center">
         <div class="text-center">
-          <div><strong class="text-5xl text-red-600">Alàn</strong></div>
+          <div><strong class="text-5xl text-red-600">alàn</strong></div>
         </div>
       </div>
     </div>
@@ -736,7 +736,9 @@ export default {
     },
 
     selectCities(idPays){
+      alert(idPays)
       axios.get("/entreprise/create/country/"+idPays,).then((res) => {
+        
         
         this.state.country = res.data.cities;
       })

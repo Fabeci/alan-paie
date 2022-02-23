@@ -4,7 +4,7 @@
       <div class="container">
         <div class="row bg-gray-700 py-3 text-white  text-center">
             <div class="col-sm-10 text-4xl font-bold font-serif">
-                BIENVENUE DANS VOTRE APPLICATION <strong class="text-5xl text-red-600">Alàn</strong>
+                Binvenue dans votre application <strong class="text-5xl text-red-600">alàn</strong>
             </div>
             <div class="col-sm-2">
                 <div class="input-group mb-0 mt-3">
@@ -21,7 +21,7 @@
         <div class="row align-items-center">
           <div class="col-sm-12 col-lg-12 mt-10">
             <center>
-            <img :src="this.baseUrl+'vendors/images/loading.jpeg'" alt />
+            <img :src="this.baseUrl+'vendors/images/logo-accueil.png'" alt />
             </center>
           </div>
         </div>

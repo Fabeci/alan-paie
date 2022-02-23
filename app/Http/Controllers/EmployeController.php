@@ -52,6 +52,15 @@ class EmployeController extends Controller
         return \Inertia\Inertia::render('Rh/Employe/Index');
     }
 
+    public function listeTableau()
+    {   
+        $employes = Employe::with("nationalite", "service", "entreprise", "contrats", "contrats.typeContrat","profil", "enfants")->paginate(10);
+
+        return \Inertia\Inertia::render('Rh/Employe/Index2',[
+                'employes' => $employes,
+        ]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -232,5 +241,9 @@ class EmployeController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function getServiceAndPoste($id){
+        dd("okkk");
     }
 }

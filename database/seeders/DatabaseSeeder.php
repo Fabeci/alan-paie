@@ -18,9 +18,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(FormeJuridiqueSeeder::class);
         $this->call(SecteurActiviteSeeder::class);
-        $this->call(ServiceSeeder::class);
         $this->call(TypeContratSeeder::class);
-        $this->call(PosteSeeder::class);
         $this->call(PaysSeeder::class);
         $this->call(TypeClassificationSeeder::class);
         $this->call(ClassificationSeeder::class);
@@ -28,7 +26,9 @@ class DatabaseSeeder extends Seeder
         $this->call(ArticleSeeder::class);
         $this->call(TypeAvantageSeeder::class);
         $this->call(AvantageSeeder::class);
-        // $this->call(ContratSeeder::class);
+        $this->call(TypeCongeSeeder::class);
+        $this->call(ServiceSeeder::class);
+        $this->call(PosteSeeder::class);
         // \App\Models\User::factory(10)->create();
 
         $superadminProfil = Profil::create([

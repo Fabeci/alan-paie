@@ -9,25 +9,42 @@
 						<div class="row">
 							<div class="col-md-6 col-sm-6">
 								<div class="title">
-									<h4>Les employés de l'entreprise</h4>
+									<h4>Gestion de carrières</h4>
 								</div>
 								<nav aria-label="breadcrumb" role="navigation">
 									<ol class="breadcrumb">
 										<li class="breadcrumb-item"><a href="index.html">Tableau de bord</a></li>
-										<li class="breadcrumb-item active" aria-current="page">employés</li>
+										<li class="breadcrumb-item active" aria-current="page">carrières</li>
 									</ol>
 								</nav>
 							</div>
                             <div class="col-md-6 col-sm-6">
-                                <div class="btn-list">
-									<a :href="route('contrat.create')" class="btn btn-secondary rounded-0"><i class="fa fa-plus"></i> Contrat</a>
-									<button type="button" class="btn btn-secondary rounded-0"><i class="fas fa-calendar-week"></i> Pointage</button>
-									<button type="button" class="btn btn-secondary rounded-0"><i class="fa fa-calendar"></i> Congés</button>
-									<button type="button" class="btn btn-secondary">Danger</button>
-								</div>
+								<dropdown-menu></dropdown-menu>
                             </div>
 						</div>
 					</div>
+					<div class="row clearfix">
+						<div class="col-lg-6 col-md-6 col-sm-12 mb-3">
+							<div class="pd-20 card-box text-center height-100-p">
+								<h5 class="pt-2 h5 mb-3">Tableau</h5>
+								<div class="max-width-200 mx-auto">
+									<a class="btn btn-secondary rounded-0" :href="route('employe.listeTableau')">
+										Voir la liste
+									</a>
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-sm-12 mb-3">
+							<div class="pd-20 card-box text-center height-100-p">
+								<h5 class="pt-2 h5 mb-3">Carte</h5>
+								<div class="max-width-200 mx-auto">
+									<button class="btn btn-secondary rounded-0" disabled>
+										Voir la liste
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>	
 					<div class="contact-directory-list">
 						<ul class="row">
 							<li v-for="employe in employesData" :key="employe.id" class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
@@ -84,6 +101,7 @@
 import AppLayout from "@/Layouts/AppLayout";
 import Welcome from "@/Jetstream/Welcome";
 import AppFooter from "@/Layouts/AppFooter";
+import DropdownMenu from "@/Layouts/DropdownMenu";
 
 export default {
 	props: ['user', "employes"],
@@ -112,7 +130,8 @@ export default {
   components: {
     AppLayout,
     AppFooter,
-    Welcome
+    Welcome,
+    DropdownMenu
   },
   
 };

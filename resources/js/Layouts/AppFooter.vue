@@ -1,10 +1,10 @@
 <template>
     <div class="footer-wrap pd-20 mb-20 card-box">
-        ALAN, devéloppé par le devéloppeur
+        alàn, devéloppé par
         <a
         href="https://github.com/dropways"
         target="_blank"
-        >Djerabe Fabrice</a>
+        >Techno-structure</a>
     </div>
 </template>
 

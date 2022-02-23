@@ -32,9 +32,9 @@
 </head>
 
 <body class="font-sans antialiased sidebar-light header-dark">
-    <!-- <div class="pre-loader">
+    <div class="pre-loader">
         <div class="pre-loader-box">
-            <div class="loader-logo"><img src="{{ asset('/template/') }}/vendors/images/loading.jpeg" alt=""></div>
+            <div class="loader-logo"><img src="{{ asset('/template/') }}/vendors/images/reload.gif" alt=""></div>
             <div class='loader-progress' id="progress_div">
                 <div class='bar' id='bar1'></div>
             </div>
@@ -43,7 +43,7 @@
                 Rechargement...
             </div>
         </div>
-    </div> -->
+    </div>
     @inertia
 
     @env ('local')
@@ -61,6 +61,16 @@
     <script src="{{ asset('/template') }}/plugins/datatables/js/dataTables.responsive.min.js"></script>
     <script src="{{ asset('/template') }}/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
     <script src="{{ asset('/template') }}/vendors/scripts/dashboard.js"></script>
+
+	<script src="{{ asset('/template') }}/plugins/datatables/js/dataTables.buttons.min.js"></script>
+	<script src="{{ asset('/template') }}/plugins/datatables/js/buttons.bootstrap4.min.js"></script>
+	<script src="{{ asset('/template') }}/plugins/datatables/js/buttons.print.min.js"></script>
+	<script src="{{ asset('/template') }}/plugins/datatables/js/buttons.html5.min.js"></script>
+	<script src="{{ asset('/template') }}/plugins/datatables/js/buttons.flash.min.js"></script>
+	<script src="{{ asset('/template') }}/plugins/datatables/js/pdfmake.min.js"></script>
+	<script src="{{ asset('/template') }}/plugins/datatables/js/vfs_fonts.js"></script>
+	<!-- Datatable Setting js -->
+	<script src="{{ asset('/template') }}/vendors/scripts/datatable-setting.js"></script>
 
 
     <script src="{{ asset('/template') }}/plugins/jQuery-Knob-master/jquery.knob.min.js"></script>

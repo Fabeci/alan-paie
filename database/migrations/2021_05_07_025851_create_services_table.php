@@ -18,6 +18,8 @@ class CreateServicesTable extends Migration
             $table->string('libelle');
             $table->text('description')->nullable();
             $table->timestamps();
+
+            $table->foreignId('employe_id')->constrained('employes');
         });
     }
 

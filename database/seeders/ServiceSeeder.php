@@ -17,7 +17,7 @@ class ServiceSeeder extends Seeder
         $services = Config::get('service');
 
         foreach($services as $q){
-            \App\Models\Service::factory()->count(1)->create(["libelle" => $q]);
+            \App\Models\Service::factory()->count(1)->create(["libelle" => $q["libelle"], "employe_id"=> $q["employe_id"]]);
         }
     }
 }

@@ -140,7 +140,7 @@
         <a href="index.html">
           <img :src="this.baseUrl+'vendors/images/logo.png'" alt class="dark-logo" />
           <img :src="this.baseUrl+'vendors/images/logo.png'" alt class="light-logo" />
-          <span class="ml-5 text-blue-800 text-4xl">ALÀN</span>
+          <span class="ml-5 text-blue-800 text-4xl">alàn</span>
         </a>
         <div class="close-sidebar" data-toggle="left-sidebar-close">
           <i class="ion-close-round"></i>
@@ -152,45 +152,53 @@
             <li class="dropdown">
               <a href="/dashboard" class="dropdown-toggle no-arrow">
                 <span class="micon dw dw-house-1"></span>
-                <span class="mtext">Tableau de bord</span>
-              </a>
-            </li>
-            <li class="dropdown">
-              <a :href="route('employe.index')" class="dropdown-toggle no-arrow">
-                <span class="micon dw dw-user1"></span>
-                <span class="mtext">Gestion de RH</span>
+                <span class="mtext">Accueil</span>
               </a>
             </li>
             <li class="dropdown">
               <a href="javascript:;" class="dropdown-toggle no-arrow">
                 <span class="micon dw dw-library"></span>
-                <span class="mtext">Gestion de paie</span>
+                <span class="mtext">Paie</span>
               </a>
             </li>
+            <li class="dropdown">
+              <a :href="route('employe.index')" class="dropdown-toggle no-arrow">
+                <span class="micon dw dw-user1"></span>
+                <span class="mtext">Carrières</span>
+              </a>
+            </li>
+
+            <li class="dropdown">
+              <a :href="route('societe.index')" class="dropdown-toggle no-arrow">
+                <span class="micon dw dw-settings2"></span>
+                <span class="mtext">Informations</span>
+              </a>
+            </li>
+            
             <li>
-              <a href="calendar.html" class="dropdown-toggle no-arrow">
+              <a :href="route('accueil-biblio.index')" class="dropdown-toggle no-arrow">
                 <span class="micon dw dw-calendar1"></span>
                 <span class="mtext">Bibliothèque</span>
               </a>
             </li>
-            <li class="dropdown">
+            <!-- <li class="dropdown">
               <a href="javascript:;" class="dropdown-toggle no-arrow">
                 <span class="micon dw dw-user2"></span>
                 <span class="mtext">Utilisateurs</span>
               </a>
-            </li>
+            </li> -->
             <li class="dropdown">
               <a :href="route('societe.index')" class="dropdown-toggle no-arrow">
                 <span class="micon dw dw-settings2"></span>
                 <span class="mtext">Paramètres</span>
               </a>
             </li>
-            <li class="dropdown">
+            <!-- <li class="dropdown">
               <a href="javascript:;" class="dropdown-toggle no-arrow">
                 <span class="micon dw dw-analytics-21"></span>
                 <span class="mtext">Statistiques</span>
               </a>
-            </li>
+            </li> -->
             
             <li>
               <a href="chat.html" class="dropdown-toggle no-arrow">

@@ -1,0 +1,315 @@
+<template>
+  <div id="wrapper">
+    <app-layout :user="user"></app-layout>
+    <div class="main-container">
+      <div class="pd-ltr-20 xs-pd-20-10">
+        <div class="min-height-200px">
+          <div class="container pd-0">
+            <div class="page-header">
+              <div class="row">
+                <div class="col-md-6 col-sm-6">
+                  <div class="title">
+                    <h4>Demande de congés</h4>
+                  </div>
+                  <nav aria-label="breadcrumb" role="navigation">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item">
+                        <a href="index.html">Tableau de bord</a>
+                      </li>
+                      <li class="breadcrumb-item active" aria-current="page">conges</li>
+                    </ol>
+                  </nav>
+                </div>
+                <div class="col-md-6 col-sm-6">
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="dropdown">
+                        <a
+                          class="btn btn-secondary dropdown-toggle rounded-0"
+                          href="#"
+                          role="button"
+                          data-toggle="dropdown"
+                        >
+                          <i class="icon-copy ion-toggle-filled"></i>
+                          Interruption
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right rounded-0">
+                          <a
+                            class="btn dropdown-item hover:text-white hover:bg-gray-500"
+                            :href="route('conge.create')"
+                          >
+                            <i class="icon-copy ion-ios-plus-outline"></i>
+                            Nouveau congé
+                          </a>
+                          <button
+                            class="btn dropdown-item hover:text-white hover:bg-gray-500"
+                            @click.prevent="apercuContratPdf"
+                            target="_bank"
+                          >
+                            <i class="icon-copy ion-ios-alarm-outline"></i>
+                            Congés annuels
+                          </button>
+                          <button
+                            class="btn dropdown-item hover:text-white hover:bg-gray-500"
+                            @click.prevent="apercuContratPdf"
+                            target="_bank"
+                          >
+                            <i class="icon-copy ion-ios-alarm-outline"></i>
+                            Congés de paternité / maternité
+                          </button>
+                          <button
+                            class="btn dropdown-item hover:text-white hover:bg-gray-500"
+                            @click.prevent="apercuContratPdf"
+                            target="_bank"
+                          >
+                            <i class="icon-copy ion-ios-alarm-outline"></i>
+                            Congés maladie
+                          </button>
+                          <button
+                            class="btn dropdown-item hover:text-white hover:bg-gray-500"
+                            @click.prevent="apercuContratPdf"
+                            target="_bank"
+                          >
+                            <i class="icon-copy ion-ios-alarm-outline"></i>
+                            Congés sans solde
+                          </button>
+                          <button
+                            class="btn dropdown-item hover:text-white hover:bg-gray-500"
+                            @click.prevent="apercuContratPdf"
+                            target="_bank"
+                          >
+                            <i class="icon-copy ion-ios-timer-outline"></i>
+                            Missions
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="dropdown">
+                        <a
+                          class="btn btn-secondary dropdown-toggle rounded-0"
+                          href="#"
+                          role="button"
+                          data-toggle="dropdown"
+                        >
+                          <i class="icon-copy ion-pinpoint"></i>
+                          Discipline
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right rounded-0">
+                          <button
+                            class="btn dropdown-item hover:text-white hover:bg-gray-500"
+                            @click.prevent="apercuContratPdf"
+                            target="_bank"
+                          >
+                            <i class="icon-copy fa fa-file-pdf-o" aria-hidden="true"></i>
+                            Demandes d'explication
+                          </button>
+                          <button
+                            class="btn dropdown-item hover:text-white hover:bg-gray-500"
+                            @click.prevent="apercuContratPdf"
+                            target="_bank"
+                          >
+                            <span class="icon-copy ti-alert"></span>
+                            Avertissements
+                          </button>
+                          <button
+                            class="btn dropdown-item hover:text-white hover:bg-gray-500"
+                            @click.prevent="apercuContratPdf"
+                            target="_bank"
+                          >
+                            <i class="icon-copy fa fa-file-pdf-o" aria-hidden="true"></i>
+                            Blâmes
+                          </button>
+                          <button
+                            class="btn dropdown-item hover:text-white hover:bg-gray-500"
+                            @click.prevent="apercuContratPdf"
+                            target="_bank"
+                          >
+                            <i class="icon-copy fa fa-file-pdf-o" aria-hidden="true"></i>
+                            Mises à pied
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-4">
+                      <div class="dropdown">
+                        <a
+                          class="btn btn-secondary dropdown-toggle rounded-0"
+                          href="#"
+                          role="button"
+                          data-toggle="dropdown"
+                        >
+                          <i class="icon-copy ion-close-circled"></i>
+                          Rupture
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right rounded-0">
+                          <button
+                            class="btn dropdown-item hover:text-white hover:bg-gray-500"
+                            @click.prevent="apercuContratPdf"
+                            target="_bank"
+                          >Fin de CDD</button>
+                          <button
+                            class="btn dropdown-item hover:text-white hover:bg-gray-500"
+                            @click.prevent="apercuContratPdf"
+                            target="_bank"
+                          >Fin de stage</button>
+                          <button
+                            class="btn dropdown-item hover:text-white hover:bg-gray-500"
+                            @click.prevent="apercuContratPdf"
+                            target="_bank"
+                          >Demission</button>
+                          <button
+                            class="btn dropdown-item hover:text-white hover:bg-gray-500"
+                            @click.prevent="apercuContratPdf"
+                            target="_bank"
+                          >Licenciement</button>
+                          <button
+                            class="btn dropdown-item hover:text-white hover:bg-gray-500"
+                            @click.prevent="apercuContratPdf"
+                            target="_bank"
+                          >Depart à la retraite</button>
+                          <button
+                            class="btn dropdown-item hover:text-white hover:bg-gray-500"
+                            @click.prevent="apercuContratPdf"
+                            target="_bank"
+                          >Decès</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="pd-20 card-box mb-10">
+              <Calendar @dateClick="dateClick"/>
+            </div>
+          </div>
+        </div>
+        <calendar-modal v-if="showModal"/>
+        <app-footer></app-footer>
+      </div>
+      
+      <modal-approbateurs :congeApp="congeApp"></modal-approbateurs>
+    </div>
+  </div>
+</template>
+
+<script>
+
+import AppLayout from "@/Layouts/AppLayout";
+import Welcome from "@/Jetstream/Welcome";
+import AppFooter from "@/Layouts/AppFooter";
+import ModalApprobateurs from "@/Pages/Rh/Conge/ModalApprobateurs";
+import Calendar from "@/Pages/Rh/Conge/Calendar";
+import CalendarModal from "@/Pages/Rh/Conge/Modals/CalendarModal";
+import { reactive, computed } from "vue";
+import useVuelidate from "@vuelidate/core";
+import {
+  required,
+  requiredIf,
+  email,
+  minLength,
+  maxLength,
+  alphaNum,
+  numeric,
+  helpers
+} from "@vuelidate/validators";
+
+export default {
+  props: ["user", "users", "employes", "type_conge", "conges"],
+
+  data(){
+    return{
+      showModal:true
+    }
+  },
+
+  setup() {
+    const state = reactive({
+      congeApp: '',
+      form: {
+        type_conge: "",
+        employe: "",
+        date_debut: "",
+        date_fin: "",
+        fichier: "",
+        approbateurs: [],
+        description: ""
+      }
+    });
+
+    const requiredIf = value => value == "3";
+
+    const rules = computed(() => {
+      return {
+        form: {
+          type_conge: {
+            required: helpers.withMessage("Ce champ est obligatoire", required)
+          },
+          employe: {
+            required: helpers.withMessage("Ce champ est obligatoire", required)
+          }
+        }
+      };
+    });
+
+    const v$ = useVuelidate(rules, state);
+
+    return { state, v$ };
+  },
+
+  computed: {
+    baseUrl() {
+      var getUrl = window.location;
+      var baseUrl = getUrl.protocol + "//" + getUrl.host + "/template/";
+      return baseUrl;
+    },
+
+    baseUrl2() {
+      var getUrl = window.location;
+      var baseUrl = getUrl.protocol + "//" + getUrl.host + "/storage/";
+      return baseUrl;
+    }
+  },
+
+  mounted() {
+    console.log(this.state.form.type_conge);
+  },
+
+  methods: {
+    dateClick(arg){
+      console.log(arg)
+    },
+    handleDateClick: function(arg) {
+      alert('date click! ' + arg.dateStr)
+    },
+
+    setFile(e) {
+      this.state.form.fichier = e.target.files[0];
+    },
+
+    congeApprouve(conge){
+        this.state.congeApp = conge
+        console.log(conge)
+    },
+
+    deleteConge(){
+
+        alert(id)
+        // axios.delete("/rh/conge/"+id,).then((res) => {
+        //     toastr.success("La demande de congé a été supprimée avec succès !!");
+        // })
+    }
+  },
+
+  components: {
+    AppLayout,
+    AppFooter,
+    Welcome,
+    ModalApprobateurs,
+    Calendar,
+    CalendarModal
+  }
+};
+</script>
+

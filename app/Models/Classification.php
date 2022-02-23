@@ -7,5 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Classification extends Model
 {
-    use HasFactory;
+    use HasFactory; 
+
+    public function typeClassification()
+    {
+        return $this->belongsTo(TypeClassification::class);
+    }
 }

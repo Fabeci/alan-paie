@@ -86,6 +86,8 @@ class CountryController extends Controller
     public function getCitiesPerCountry($id){
         $cities = Country::where('id', $id)->with('stateCity')->first();
 
+        // dd($cities);
+
         return response()->json([
             "cities" => $cities,
         ]);

@@ -14,7 +14,7 @@ module.exports = {
         extend: {
             backgroundImage: theme => ({
             'image': "url('/template/vendors/images/afrique.jpeg')",
-            'bienvenue': "url('/template/vendors/images/afrique3.png')",
+            'bienvenue': "url('/template/vendors/images/2ddw.gif')",
             }),
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],

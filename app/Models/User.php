@@ -72,4 +72,9 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->morphTo();
     }
+
+    public function conges()
+    {
+        return $this->belongsToMany(Conge::class)->withPivot('statut', 'heure', 'fichier');
+    }
 }
